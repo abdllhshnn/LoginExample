@@ -1,0 +1,7 @@
+.customFooter {
+  background-color: rgba(182, 185, 189, 0.32);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}

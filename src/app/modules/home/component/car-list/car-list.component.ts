@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import {Select, Store} from "@ngxs/store";
+import {CarsState, CarsStateModel} from "../../../../core/state/cars.state";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-car-list',
@@ -6,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./car-list.component.css']
 })
 export class CarListComponent {
-
+constructor(private store:Store) {
+}
+@Select(CarsState.getState) Cars$: Observable<CarsStateModel> | undefined
 }
